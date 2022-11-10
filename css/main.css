@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+    TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+        -UNIVERSAL
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        -HERO
+        - NAV
+        - FEATURES
+        - CLEARING
+        - LIMITAIONS
+        - FUTURE
+        - FOOTER
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+        - Screen Reader	    
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+    3.0 - GENERIC
+-------------------------------------------------------------- */
+
+/* ----- UNIVERSAL ----- */
+
+*{
+}
+
+html{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+}
+
+/*--------------------------------------------------------------
+    4.0 - ELEMENT
+-------------------------------------------------------------- */
+
+
+
+/* ----- TYPOGRAPHY ----- */
+
+h1{
+        font-weight: 700;
+        font-size: 4rem;
+        text-align: center;
+}
+
+h2{
+        font-weight: 700;   
+        font-size: 3rem;   
+}
+
+p{
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.5em;
+}
+
+/*--------------------------------------------------------------
+    6.0 - OBJECTS
+-------------------------------------------------------------- */
+
+/* ----- FRAMEWORK ----- */
+
+.wrapper{
+        width: 1024px;
+        margin: 0 auto;
+}
+
+.row{
+        display: flex;
+        justify-content: space-between;
+}
+
+.row::after{
+        content: "";
+        display: table;
+        clear: both;
+}
+
+/*--------------------------------------------------------------
+    6.0 - COMPONENTS
+-------------------------------------------------------------- */
+
+/* ----- content ----- */
+
+section div,
+header{
+        margin: 10px;
+        padding: 10px;
+        background: #D9D9D9;
+}
+
+.col-6{}
+
+.col-5{
+        width: 115%;
+}
+
+.col-4{
+        width: 70%;
+}
+
+.col-3{
+        width: 70%;
+}
+
+.col-2{
+        width: 50%;
+}
+
+.col-1{
+        background-image: url(../img/hand.jpg) ;
+        background-size: cover;
+        width: 40%;
+}
+
+img{
+       width: 50%;
+       margin: 0 auto;
+       justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+
+        .wrapper{
+                width: 95%;
+                max-width: 480px;
+        }
+
+       .col-6{
+               width: 80%;
+       }
+        
+        .col-5{
+                width: 500%;
+        }
+        
+        .col-4{
+                width: 70%;
+        }
+        
+        .col-3{
+                width: 70%;
+        }
+
+        .col-3~div{
+                width: 30%;
+        }
+        
+        .col-2{
+                width: 90%;
+        }
+        .col-2~div{
+                width: 10%;
+                
+        }
+        
+        .col-1{
+                background-image: url(../img/hand.jpg) ;
+                background-size: cover;
+                width: 90%;
+        }
+
+        .col-1~div{
+                width: 20%;
+        }
+        
+        img{
+               width: 100%;
+
+        }
+
+}
+
+
+@media screen and (max-width: 768px){
+
+        .wrapper{
+                width: 85%;
+                max-width: 768px;
+        }
+
+       .col-6{
+               width: 80%;
+       }
+        
+        .col-5{
+                width: 500%;
+        }
+        
+        .col-4{
+                width: 70%;
+        }
+        
+        .col-3{
+                width: 70%;
+        }
+
+        .col-3~div{
+                width: 60%;
+        }
+        
+        .col-2{
+                width: 30%;
+        }
+        .col-2~div{
+                width: 70%;
+                
+        }
+        
+        .col-1{
+                background-image: url(../img/hand.jpg) ;
+                background-size: cover;
+                width: 90%;
+        }
+
+        .col-1~div{
+                width: 20%;
+        }
+        
+        img{
+               width: 70%;
+
+        }
+
+}
+
+/*--------------------------------------------------------------
+    7.0 - UTILITY
+-------------------------------------------------------------- */
+
+/* ----- SCREEN READER ----- */
+
+.sr-only {
+        position: absolute;
+          position: absolute !important;
+          width: 1px !important;
+          height: 1px !important;
+          padding: 0 !important;
+          margin: -1px !important;
+          overflow: hidden !important;
+          clip: rect(0,0,0,0) !important;
+          white-space: nowrap !important;
+          border: 0 !important;
+}
+
+
+
